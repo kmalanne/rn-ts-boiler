@@ -1,2 +1,2 @@
 # rn-ts-boiler
-React Native TypeScrip boilerplate
+React Native TypeScript boilerplate
