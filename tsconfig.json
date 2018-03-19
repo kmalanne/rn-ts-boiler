@@ -30,7 +30,6 @@
         "jest"
     ],
     "exclude": [
-        "./App.js",
         "android",
         "ios",
         "build",
