@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
+
 import IStoreState from '../store/IStoreState';
-import reactionsReducer from './reactionsReducer';
+import counterReducer from './counterReducer';
 
 const rootReducer = combineReducers<IStoreState>({
-  reactionsReducer,
+  counterReducer,
 });
 
 export default rootReducer;

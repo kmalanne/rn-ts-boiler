@@ -1,33 +1,22 @@
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
 
-const instructions = Platform.select({
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-});
+import Counter from './src/components/Counter';
+import configureStore from './src/store/configureStore';
 
-interface IProps { }
+interface IProps {}
 export default class App extends Component<IProps> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native TypeScript boilerplate!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.tsx
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Provider store={configureStore()}>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            React Native Redux TypeScript boilerplate
+          </Text>
+          <Counter />
+        </View>
+      </Provider>
     );
   }
 }
@@ -35,14 +24,9 @@ export default class App extends Component<IProps> {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#72ba3a',
     flex: 1,
     justifyContent: 'center',
-  },
-  instructions: {
-    color: '#333333',
-    marginBottom: 5,
-    textAlign: 'center',
   },
   welcome: {
     fontSize: 20,

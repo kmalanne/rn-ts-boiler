@@ -1,5 +1,5 @@
-import { ILikeAction } from './reactions/like';
+import { IDecrementAction, IIncrementAction } from './counterActions';
 
-type ActionTypes = ILikeAction; // | IxxAction | IyyAction etc.
+type ActionTypes = IDecrementAction | IIncrementAction;
 
 export default ActionTypes;

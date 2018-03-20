@@ -1,3 +1,3 @@
 export default interface IStoreState {
-  readonly likes: number;
+  readonly count: number;
 };

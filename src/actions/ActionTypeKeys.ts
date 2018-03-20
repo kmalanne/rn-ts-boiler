@@ -1,5 +1,6 @@
 enum ActionTypeKeys {
-  LIKE = 'LIKE',
+  INCREMENT = 'INCREMENT',
+  DECREMENT = 'DECREMENT',
 }
 
 export default ActionTypeKeys;
