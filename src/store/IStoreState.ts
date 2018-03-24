@@ -1,3 +1,3 @@
 export default interface IStoreState {
-  readonly count: number;
+  readonly counter: number;
 };

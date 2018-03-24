@@ -3,10 +3,11 @@ import { bindActionCreators } from 'redux';
 
 import { decrement, increment } from '../actions/counterActions';
 import Counter from '../components/Counter';
+import { counter } from '../selectors/counterSelector';
 import IStoreState from '../store/IStoreState';
 
 const mapStateToProps = (state: IStoreState) => ({
-  count: state,
+  counter: counter(state),
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<IStoreState>) => ({
@@ -14,13 +15,11 @@ const mapDispatchToProps = (dispatch: Dispatch<IStoreState>) => ({
   onIncrement: bindActionCreators(increment, dispatch),
 });
 
-export function mergeProps(
+const mergeProps = (
   stateProps: object,
   dispatchProps: object,
   ownProps: object
-) {
-  return { ...ownProps, ...stateProps, ...dispatchProps };
-}
+) => ({ ...ownProps, ...stateProps, ...dispatchProps });
 
 export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(
   Counter

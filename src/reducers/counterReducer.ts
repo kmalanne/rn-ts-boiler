@@ -1,8 +1,8 @@
-import ActionTypeKeys from '../actions/ActionTypeKeys';
-import ActionTypes from '../actions/ActionTypes';
+import ActionTypeKeys from '../actions/actionTypeKeys';
+import ActionTypes from '../actions/actionTypes';
 import initialState from './initialState';
 
-const counterReducer = (state = initialState.count, action: ActionTypes) => {
+const counterReducer = (state = initialState.counter, action: ActionTypes) => {
   switch (action.type) {
     case ActionTypeKeys.DECREMENT:
       return onDecrement(state);
@@ -14,7 +14,7 @@ const counterReducer = (state = initialState.count, action: ActionTypes) => {
 };
 
 const onDecrement = (state: number) => {
-  return state + 1;
+  return state - 1;
 };
 
 const onIncrement = (state: number) => {

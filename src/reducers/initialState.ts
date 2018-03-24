@@ -1,7 +1,7 @@
 import IStoreState from '../store/IStoreState';
 
 const defaultState: IStoreState = {
-  count: 0,
+  counter: 0,
 };
 
 export default defaultState;

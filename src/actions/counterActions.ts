@@ -1,4 +1,4 @@
-import keys from './ActionTypeKeys';
+import keys from './actionTypeKeys';
 
 export interface IDecrementAction {
   readonly type: keys.DECREMENT;

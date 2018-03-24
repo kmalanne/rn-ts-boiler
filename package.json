@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "clean": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "test": "jest",
     "lint": "tslint 'src/**/*.ts?(x)'"
   },
   "dependencies": {
+    "@types/react-navigation": "^1.2.3",
     "react": "16.3.0-alpha.2",
     "react-native": "^0.54.2",
+    "react-navigation": "^1.5.8",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
